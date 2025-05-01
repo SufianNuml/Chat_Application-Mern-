@@ -1,0 +1,100 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    color: #fff;
+    position: relative; /* Ensure position relative for positioning toggle icon */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 40px; /* Adjust the height as needed */
+    width: auto;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-item a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
+}
+
+.navbar-item a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute; /* Position toggle icon absolutely */
+    top: 1rem; /* Adjust as needed */
+    right: 1rem; /* Adjust as needed */
+}
+
+.navbar-toggle-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+/* Active toggle styles */
+.navbar-toggle.open .navbar-toggle-icon:nth-child(1) {
+    transform: rotate(45deg);
+    margin: 0;
+}
+
+.navbar-toggle.open .navbar-toggle-icon:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.open .navbar-toggle-icon:nth-child(3) {
+    transform: rotate(-45deg);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        text-align: center;
+        background-color: #333;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}

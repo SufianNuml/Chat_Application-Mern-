@@ -1,0 +1,137 @@
+/* AddUser.css */
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Add User Container */
+/* .add-user-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.add-user-container {
+  width: 100%;
+  box-sizing: border-box;
+  /* padding: 1rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Search Input */
+.search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* No Match Message */
+.no-match-message {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* User Table */
+.user-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+}
+
+.user-row {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.user-row:last-child {
+  border-bottom: none;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-table td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.user-table td:nth-child(2) {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Add Friend Button */
+.add-friend-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #0084ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-friend-btn:hover {
+  background-color: #005bb5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .add-user-container {
+    /* padding: 1rem; */
+  }
+
+  .search-input {
+    margin: 0 auto; /* Center the input field horizontally */
+    width: 90%; /* Make the input field occupy 90% of the available width */
+    max-width: none; /* Remove any maximum width constraint */
+    display: block; /* Ensure the input field is displayed as a block element */
+  }
+
+  .user-table {
+    width: 100%;
+    max-width: none;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+  }
+
+  .user-table td {
+    font-size: 14px;
+  }
+
+  .add-friend-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+  }
+}
